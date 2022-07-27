@@ -9,19 +9,15 @@ public class ReaderFileFullPath {
     }
 
 
-    public boolean readUserFileInputAndReturnTrueOrFalse()throws IOException{
+    public void readUserFileInputAndReturnTrueOrFalse()throws IOException{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         boolean doWeHaveAFile = false;
-        File file;
 
         try {
             System.out.println("Please insert entire file path:");
             File directoryPath = new File(reader.readLine());
-            file = new File(directoryPath.getPath());
-
-            System.out.println(doWeHaveAFile = file.isFile());
-            return doWehaveFile;
+            System.out.println(doWeHaveAFile = directoryPath.isFile());
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {

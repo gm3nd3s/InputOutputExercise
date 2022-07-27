@@ -38,6 +38,7 @@ public class WriteFile {
 
             System.out.println("Please insert file:");
             File file = new File(reader.readLine());
+
             System.out.println(file);
             String filePath = directory.getName().concat("/").concat(file.getName());
             writer = new BufferedWriter(new FileWriter(filePath));

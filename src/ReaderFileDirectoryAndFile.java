@@ -23,11 +23,11 @@ public class ReaderFileDirectoryAndFile {
                 writer.write(file.getName() + "\n");
                 System.out.println("File name: " + file.getName());
             }
-
-            BufferedReader readerFile = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Please insert file:");
+            BufferedReader readerFile = new BufferedReader(new InputStreamReader(System.in));
 
-            File filePath = new File(reader.readLine());
+
+            File filePath = new File(readerFile.readLine());
             String entireFilePath = directoryPath.getName().concat("/").concat(filePath.getName());
 
             for (File file: filesList){
